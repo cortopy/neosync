@@ -68,8 +68,8 @@ Generate the stringData section for environment variables
 DB_HOST: {{ .Values.db.host }}
 DB_PORT: {{ .Values.db.port | quote }}
 DB_NAME: {{ .Values.db.name }}
-DB_USER: {{ .Values.db.username }}
-DB_PASS: {{ .Values.db.password }}
+# DB_USER: {{ .Values.db.username }}
+# DB_PASS: {{ .Values.db.password }}
 DB_SSL_DISABLE: {{ .Values.db.disableSsl | quote}}
 {{- if .Values.db.options }}
 DB_OPTIONS: {{ .Values.db.options | quote}}
@@ -186,8 +186,8 @@ Generate the stringData section for environment variables
 DB_HOST: {{ .Values.migrations.db.host }}
 DB_PORT: {{ .Values.migrations.db.port | quote }}
 DB_NAME: {{ .Values.migrations.db.name }}
-DB_USER: {{ .Values.migrations.db.username }}
-DB_PASS: {{ .Values.migrations.db.password }}
+# DB_USER: {{ .Values.migrations.db.username }}
+# DB_PASS: {{ .Values.migrations.db.password }}
 DB_SSL_DISABLE: {{ .Values.migrations.db.disableSsl | quote}}
 {{- if .Values.migrations.db.options }}
 DB_MIGRATIONS_OPTIONS: {{ .Values.migrations.db.options | quote}}
