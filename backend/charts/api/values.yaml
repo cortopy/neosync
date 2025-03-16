@@ -264,6 +264,9 @@ updateStrategy:
 # -- Provide extra environment variables that will be applied to the deployment's user-container.
 extraEnvVars: []
 
+# -- Provide a list of secrets that should be mounted as environment variables
+envFromSecrets: []
+
 # -- Provide sidecars that will be appended directly to the deployment next to the user-container
 sidecarContainers: []
 

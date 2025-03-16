@@ -188,6 +188,12 @@ spec:
           envFrom:
             - secretRef:
                 name: {{ template "neosync-worker.fullname" . }}-service-evs-{{ include "neosync-worker.env-vars" . | sha256sum | trunc 8 }}
+            {{- if .Values.envFromSecrets }}
+            {{- range .Values.envFromSecrets }}
+            - secretRef:
+                name: {{ . }}
+            {{- end }}
+            {{- end }}
 
       {{- if .Values.sidecarContainers }}
       {{- toYaml .Values.sidecarContainers | nindent 8 }}
